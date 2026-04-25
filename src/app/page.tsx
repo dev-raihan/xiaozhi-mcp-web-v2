@@ -236,7 +236,7 @@ export default function Home() {
             <Card className="bg-white/5 border-primary">
               <CardContent className="p-6">
                 <div className="text-sm text-muted-foreground mb-2">Pro</div>
-                <div className="text-3xl font-bold mb-4">$9< span className="text-sm font-normal text-muted-foreground">/mo</span></div>
+                <div className="text-3xl font-bold mb-4">$9<span className="text-sm font-normal text-muted-foreground">/mo</span></div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-primary" />
