@@ -1,9 +1,3 @@
-import type { MetadataViewport } from "next";
-
-export const metadata: MetadataViewport = {
-  themeColor: "#0a0a0f",
-};
-
 export default function RootLayout({
   children,
 }: {

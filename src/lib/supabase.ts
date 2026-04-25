@@ -42,8 +42,9 @@ export const updatePassword = async (newPassword: string) => {
   });
 };
 
-export const verifyEmail = async (token: string) => {
+export const verifyEmail = async (email: string, token: string) => {
   return await supabase.auth.verifyOtp({
+    email,
     token,
     type: "email",
   });

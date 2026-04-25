@@ -15,10 +15,10 @@ import {
   Image,
   Send,
   TrendingUp,
-  Dollar,
+  
   Wind,
   Lightbulb,
-  PartyPopper,
+  
   Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,11 +30,11 @@ const TOOLS = [
   { id: "web_search", name: "Web Search", icon: Search, params: [{ name: "query", label: "Search Query", type: "text" }] },
   { id: "weather", name: "Weather", icon: Cloud, params: [{ name: "city", label: "City Name", type: "text" }] },
   { id: "wikipedia", name: "Wikipedia", icon: Book, params: [{ name: "topic", label: "Topic", type: "text" }] },
-  { id: "joke", name: "Random Joke", icon: PartyPopper, params: [] },
+  { id: "joke", name: "Random Joke", icon: Loader2, params: [] },
   { id: "number_fact", name: "Number Fact", icon: Calculator, params: [{ name: "number", label: "Number (0-100)", type: "number" }] },
   { id: "history_today", name: "History Today", icon: Calendar, params: [] },
   { id: "crypto_price", name: "Crypto Price", icon: TrendingUp, params: [{ name: "symbol", label: "Crypto Symbol (e.g., BTC)", type: "text" }] },
-  { id: "currency_convert", name: "Currency Convert", icon: Dollar, params: [{ name: "from", label: "From (e.g., USD)", type: "text" }, { name: "to", label: "To (e.g., EUR)", type: "text" }, { name: "amount", label: "Amount", type: "number" }] },
+  { id: "currency_convert", name: "Currency Convert", icon: TrendingUp, params: [{ name: "from", label: "From (e.g., USD)", type: "text" }, { name: "to", label: "To (e.g., EUR)", type: "text" }, { name: "amount", label: "Amount", type: "number" }] },
   { id: "air_quality", name: "Air Quality", icon: Wind, params: [{ name: "city", label: "City Name", type: "text" }] },
   { id: "calculator", name: "Calculator", icon: Calculator, params: [{ name: "expression", label: "Expression (e.g., 2+2)", type: "text" }] },
 ];
@@ -61,6 +61,10 @@ export default function ToolsPage() {
       setLoading(false);
     }
   };
+
+  function copyToClipboard(text: string) {
+    navigator.clipboard.writeText(text);
+  }
 
   return (
     <div className="space-y-8">
